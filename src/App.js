@@ -1,5 +1,6 @@
 import "./App.css";
-import Button from "./Button/Button";
+import Button from "./Components/Button/Button";
+import Info from "./Components/Info/Info";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
         <header class="main-header">
           <section class="controls">
             <h1 class="main-title">The pointing gentlemen</h1>
+            <Info className={"info"} />
             <Button
               className={"button button--select"}
               text={"Select all"}
@@ -25,5 +27,13 @@ function App() {
     </>
   );
 }
+
+//   const countSelectedGentlemen = () => {
+//     const selectedGentlemen = gentlemen
+//       .filter((gentleman) => gentleman.selected)
+//       .map((selectedGentleman) => selectedGentleman).length;
+
+//     return selectedGentlemen;
+//   };
 
 export default App;
