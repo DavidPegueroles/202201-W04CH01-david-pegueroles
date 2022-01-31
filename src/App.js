@@ -6,12 +6,14 @@ function App() {
     <>
       <div class="container">
         <header class="main-header">
-          <h1 class="main-title">The pointing gentlemen</h1>
-          <Button
-            className={"button button--select"}
-            text={"Select all"}
-            onClick={""}
-          />
+          <section class="controls">
+            <h1 class="main-title">The pointing gentlemen</h1>
+            <Button
+              className={"button button--select"}
+              text={"Select all"}
+              onClick={""}
+            />
+          </section>
         </header>
 
         <section class="controls"></section>
