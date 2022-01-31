@@ -1,15 +1,16 @@
 import "./App.css";
 import Button from "./Components/Button/Button";
+import Gentleman from "./Components/Gentleman/Gentleman";
 import Info from "./Components/Info/Info";
 import gentlemen from "./gentlemen";
 
 function App() {
   return (
     <>
-      <div class="container">
-        <header class="main-header">
-          <section class="controls">
-            <h1 class="main-title">The pointing gentlemen</h1>
+      <div className="container">
+        <header className="main-header">
+          <section className="controls">
+            <h1 className="main-title">The pointing gentlemen</h1>
             <Info className={"info"} number={countSelectedGentlemen()} />
             <Button
               className={"button button--select"}
@@ -19,10 +20,14 @@ function App() {
           </section>
         </header>
 
-        <section class="controls"></section>
+        <section className="controls"></section>
 
-        <main class="main">
-          <ul class="gentlemen"></ul>
+        <main className="main">
+          <ul className="gentlemen">
+            {gentlemen.map((gentleman) => (
+              <Gentleman gentleman={gentleman} />
+            ))}
+          </ul>
         </main>
       </div>
     </>
@@ -30,9 +35,9 @@ function App() {
 }
 
 const countSelectedGentlemen = () => {
-  const selectedGentlemen = gentlemen
-    .filter((gentleman) => gentleman.selected)
-    .map((selectedGentleman) => selectedGentleman).length;
+  const selectedGentlemen = gentlemen.filter(
+    (gentleman) => gentleman.selected
+  ).length;
 
   return selectedGentlemen;
 };
