@@ -2,6 +2,7 @@ import "./App.css";
 import Button from "./Components/Button/Button";
 import Gentleman from "./Components/Gentleman/Gentleman";
 import Info from "./Components/Info/Info";
+import countSelectedGentlemen from "./countSelectedGentlemen";
 import gentlemen from "./gentlemen";
 
 function App() {
@@ -33,13 +34,5 @@ function App() {
     </>
   );
 }
-
-const countSelectedGentlemen = () => {
-  const selectedGentlemen = gentlemen.filter(
-    (gentleman) => gentleman.selected
-  ).length;
-
-  return selectedGentlemen;
-};
 
 export default App;
