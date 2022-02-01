@@ -2,6 +2,7 @@ import "./App.css";
 import Button from "./Components/Button/Button";
 import Gentleman from "./Components/Gentleman/Gentleman";
 import Info from "./Components/Info/Info";
+import countSelectedGentlemen from "./countSelectedGentlemen";
 import gentlemen from "./gentlemen";
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
             <Button
               className={"button button--select"}
               text={"Select all"}
-              onClick={""}
+              onClick={() => console.log("este tampoco :(")}
             />
           </section>
         </header>
@@ -25,7 +26,10 @@ function App() {
         <main className="main">
           <ul className="gentlemen">
             {gentlemen.map((gentleman) => (
-              <Gentleman gentleman={gentleman} />
+              <Gentleman
+                gentleman={gentleman}
+                onClick={() => console.log("no va :(")}
+              />
             ))}
           </ul>
         </main>
@@ -33,13 +37,5 @@ function App() {
     </>
   );
 }
-
-const countSelectedGentlemen = () => {
-  const selectedGentlemen = gentlemen.filter(
-    (gentleman) => gentleman.selected
-  ).length;
-
-  return selectedGentlemen;
-};
 
 export default App;
