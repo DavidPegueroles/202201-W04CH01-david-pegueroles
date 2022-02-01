@@ -16,7 +16,7 @@ function App() {
             <Button
               className={"button button--select"}
               text={"Select all"}
-              onClick={""}
+              onClick={() => console.log("este tampoco :(")}
             />
           </section>
         </header>
@@ -26,7 +26,10 @@ function App() {
         <main className="main">
           <ul className="gentlemen">
             {gentlemen.map((gentleman) => (
-              <Gentleman gentleman={gentleman} />
+              <Gentleman
+                gentleman={gentleman}
+                onClick={() => console.log("no va :(")}
+              />
             ))}
           </ul>
         </main>

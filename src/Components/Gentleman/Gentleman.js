@@ -1,6 +1,6 @@
-const Gentleman = ({ gentleman }) => {
+const Gentleman = ({ gentleman, onClick }) => {
   return (
-    <li className="gentleman">
+    <li className="gentleman" onClick={onClick}>
       <div className="gentleman__avatar-container">
         <img
           className="gentleman__avatar"
