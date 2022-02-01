@@ -1,6 +1,9 @@
 const Gentleman = ({ gentleman, onClick }) => {
   return (
-    <li className="gentleman" onClick={onClick}>
+    <li
+      className={gentleman.selected ? "gentleman selected" : "gentleman"}
+      onClick={onClick}
+    >
       <div className="gentleman__avatar-container">
         <img
           className="gentleman__avatar"
